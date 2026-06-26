@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Obstaculo
+  - Escudo
+  - Aliado
+  - Enemigo
+  - Insulto
   layers:
   - Default
   - TransparentFX
