@@ -15975,8 +15975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb40af1bb0f44384cbbd3dd52a2c699c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProyectil: {fileID: 7737718292515474202, guid: 8acd649d3440f144db3d33d17ce8ff09, type: 3}
-  tiempoEntreDisparos: 3
+  velocidadEnemigo: 3
+  rangoDeteccionMatematica: 20
+  distanciaMinimaDetencion: 0.6
 --- !u!212 &1174085444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16175,8 +16176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 5
   pivoteEscudo: {fileID: 1753943792}
-  velocidadGiro: 300
-  rangoDeteccion: 12
+  velocidadGiroEscudo: 400
+  rangoDeteccionMatematica: 12
 --- !u!58 &1209085908
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16207,7 +16208,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -16348,6 +16349,7 @@ GameObject:
   - component: {fileID: 1427590616}
   - component: {fileID: 1427590615}
   - component: {fileID: 1427590614}
+  - component: {fileID: 1427590617}
   m_Layer: 0
   m_Name: Paredes_y_Obstaculos
   m_TagString: Obstaculo
@@ -16400,7 +16402,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -21128,6 +21130,33 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!50 &1427590617
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427590612}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1472660179
 GameObject:
   m_ObjectHideFlags: 0
@@ -21223,8 +21252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc56d6465d5e3b45a5eded73089f434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadOrbita: 2.5
-  radioOrbita: 5
+  prefabProyectil: {fileID: 7737718292515474202, guid: 8acd649d3440f144db3d33d17ce8ff09, type: 3}
+  cadenciaDisparo: 2.5
+  rangoDeVisionMatematica: 12
 --- !u!212 &1472660183
 SpriteRenderer:
   m_ObjectHideFlags: 0
